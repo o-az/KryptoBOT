@@ -1,14 +1,16 @@
 import fetch from "node-fetch";
 
-const url = `https://api.coingecko.com/api/v3/simple/price?`;
+//const url = `https://api.coingecko.com/api/v3/simple/price?`;
+const url = 'https://api.coingecko.com/api/v3/coins/bitcoin?'
 
 const tickers = ["bitcoin", "ethereum", "terra-luna", "solana", "binancecoin"];
 
 let options = {
   method: "GET",
   qs: {
-    ids: tickers.toString(),
-    vs_currencies: "usd",
+    // ids: tickers.toString(),
+    // vs_currencies: "usd",
+    localization: 'false',
   },
 };
 
