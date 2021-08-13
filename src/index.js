@@ -25,13 +25,13 @@ client.once('ready', () => {
 
   setInterval(() => {
     BOT.setNickname(`${currency(BtcPrice)} USD`);
-  }, 15000);
+  }, 2000);
 
   setInterval(() => {
     client.user.setActivity(`MCap=${currency(BtcMarketcap)}`, {
       type: 'WATCHING',
     });
-  }, 15000);
+  }, 2000);
 });
 
 client.login(config.token);
