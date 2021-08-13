@@ -30,7 +30,7 @@ client.once('ready', () => {
     client.user.setActivity(`MCap=${currency(tokenMarketcap)}`, {
       type: 'WATCHING',
     });
-  }, 2000);
+  }, 8000);
 });
 
 client.login(config.token);
