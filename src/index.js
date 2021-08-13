@@ -1,34 +1,33 @@
-/* eslint-disable no-console */
 import { Client, Intents } from 'discord.js';
 import 'dotenv/config';
 import config from './discord-config.js';
 import getCryptoPrices from './ticker-prices.js';
 import { currency } from './utils/formatters.js';
 
-const BOT_ID = config.bot_user_id;
-const SERVER_ID = config.discord_server_ID;
+const BOT_ID = config.botUserID;
+const SERVER_ID = config.discordServerID;
+
+const CRYPTO_TOKEN = config.trackPriceOf;
 
 const client = new Client({
   intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES],
 });
 
-const cryptoTicker = await getCryptoPrices();
-
 client.once('ready', () => {
   console.log('We on . . .');
 
   const guild = client.guilds.cache.get(SERVER_ID);
+
   const BOT = guild.members.cache.get(BOT_ID);
 
-  const BtcPrice = cryptoTicker.market_data['current_price'].usd;
-  const BtcMarketcap = cryptoTicker.market_data['market_cap'].usd;
+  setInterval(async () => {
+    const cryptoTicker = await getCryptoPrices();
+    const tokenPrice = cryptoTicker[CRYPTO_TOKEN].usd;
+    const tokenMarketcap = cryptoTicker[CRYPTO_TOKEN].usd_market_cap;
 
-  setInterval(() => {
-    BOT.setNickname(`${currency(BtcPrice)} USD`);
-  }, 2000);
+    BOT.setNickname(`${currency(tokenPrice)} USD`);
 
-  setInterval(() => {
-    client.user.setActivity(`MCap=${currency(BtcMarketcap)}`, {
+    client.user.setActivity(`MCap=${currency(tokenMarketcap)}`, {
       type: 'WATCHING',
     });
   }, 2000);
