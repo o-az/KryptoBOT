@@ -10,7 +10,7 @@ const SERVER_ID = config.discordServerID;
 const CRYPTO_TOKEN = config.trackPriceOf;
 
 const client = new Client({
-  intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES],
+  intents: [Intents.FLAGS.GUILDS],
 });
 
 client.once('ready', () => {

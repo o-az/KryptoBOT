@@ -25,11 +25,4 @@ async function getCryptoPrices() {
   return prices;
 }
 
-setInterval(async () => {
-  const cryptoTicker = await getCryptoPrices();
-  // const BtcPrice = cryptoTicker.ethereum.usd;
-  // const BtcMarketcap = cryptoTicker.ethereum.usd_market_cap;
-  console.log(cryptoTicker);
-}, 3000);
-
 export default getCryptoPrices;
