@@ -1,22 +1,32 @@
 {
   "name": "discord-crypto-prices",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Get live crypto price updates through bot nickname",
+  "main": "server.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon .",
+    "dev": "nodemon ./src/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Omar-Aziz/discord-crypto-prices"
+  },
   "dependencies": {
     "discord.js": "^13.0.1",
-    "dotenv": "^10.0.0"
+    "dotenv": "^10.0.0",
+    "node-fetch": "^2.6.1"
   },
   "devDependencies": {
     "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.24.0",
+    "eslint-plugin-prettier": "^3.4.0",
     "nodemon": "^2.0.12",
     "prettier": "^2.3.2"
   }
