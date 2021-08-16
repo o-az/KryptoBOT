@@ -1,7 +1,7 @@
 export default {
   prefix: process.env.PREFIX,
   token: process.env.BOT_TOKEN,
-  botUserID: process.env.USER_ID,
+  clientID: process.env.CLIENT_ID,
   discordServerID: process.env.DISCORD_SERVER_ID,
   trackPriceOf: process.env.TRACK_PRICE_OF,
   CryptoTokenIDs: [

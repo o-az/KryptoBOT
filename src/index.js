@@ -1,12 +1,10 @@
 import { Client, Intents } from 'discord.js';
-import 'dotenv/config';
 import config from './discord-config.js';
 import getCryptoPrices from './ticker-prices.js';
 import { currency } from './utils/formatters.js';
 
-const BOT_ID = config.botUserID;
+const BOT_ID = config.clientID;
 const SERVER_ID = config.discordServerID;
-
 const CRYPTO_TOKEN = config.trackPriceOf;
 
 const client = new Client({
@@ -17,7 +15,6 @@ client.once('ready', () => {
   console.log('We on . . .');
 
   const guild = client.guilds.cache.get(SERVER_ID);
-
   const BOT = guild.members.cache.get(BOT_ID);
 
   setInterval(async () => {
@@ -27,7 +24,7 @@ client.once('ready', () => {
 
     BOT.setNickname(`${currency(tokenPrice)} USD`);
 
-    client.user.setActivity(`MCap=${currency(tokenMarketcap)}`, {
+    client.user.setActivity(`Mcap=${currency(tokenMarketcap)}`, {
       type: 'WATCHING',
     });
   }, 8000);
