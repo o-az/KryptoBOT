@@ -1,14 +1,14 @@
 {
   "name": "kryptobot",
   "version": "2.0.0",
-  "description": "Get live crypto price updates through bot nickname",
-  "main": "index.js",
+  "description": "Discord bot tracks crypto price",
+  "main": "src/index.js",
   "type": "module",
   "scripts": {
     "dev": "nodemon -r dotenv/config ./src/index.js",
     "start": "pm2 restart ./src/index.js --node-args='-r dotenv/config'"
   },
-  "author": "Omar Aziz <omars@hey.com>",
+  "author": "Omar Aziz <omars@hey.com> (https://omars.io)",
   "license": "MIT",
   "repository": {
     "type": "git",
