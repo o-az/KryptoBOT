@@ -6,6 +6,7 @@
 </div> -->
 
 ---
+
 ### A simple, easy to setup, Discord cryptocurrency price tracking tool. It works by periodically updating your bot's nickname with live price. You can track price of any cryptocurrency you want, as long as it's listed on [coingecko](https://coingecko.com 'coingecko').
 
 <div style="text-align: center;">
