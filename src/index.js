@@ -1,7 +1,8 @@
 import { Client, Intents } from 'discord.js';
 import config from './discord-config.js';
 import getCryptoPrices from './ticker-prices.js';
-import { currency } from './utils/formatters.js';
+import {
+currency } from './utils/formatters.js';
 
 const BOT_ID = config.clientID;
 const SERVER_ID = config.discordServerID;
