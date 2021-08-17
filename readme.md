@@ -27,15 +27,22 @@
    DISCORD_SERVER_ID=your-discord-server-id
    TRACK_PRICE_OF=dogecoin
    ```
-3. Set the value of `TRACK_PRICE_OF` to whatever token you want to track the price of,
+3. Set the value of `TRACK_PRICE_OF` to whatever token you want to track the
+   price of,
+
 4. Add your bot to your Discord server,
-5. Install dependencies:`npm install`
+
+5. Install dependencies:&nbsp;&nbsp;`npm install`
 
 6. Run the process:
 
-   for development`npm run dev`,
+   for development:&nbsp;&nbsp;`npm run dev`
 
-   for production, install [pm2](https://github.com/Unitech/pm2) `npm install pm2 -g`, then run`npm start`.
+   for production, first install [pm2](https://github.com/Unitech/pm2), then run:
+
+   `npm install pm2 -g`
+
+   `npm start`
 
 #### Creating a Discord bot: [Guide](https://discord.com/developers/applications 'Guide')
 
