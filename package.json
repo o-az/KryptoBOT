@@ -3,6 +3,12 @@
   "version": "2.0.0",
   "description": "Discord bot tracks crypto price",
   "main": "src/index.js",
+  "scripts": {
+    "dev": "nodemon -r dotenv/config ./src/index.js",
+    "start": "pm2 restart ./src/index.js --node-args='-r dotenv/config'",
+    "prettier": "npx prettier --write ./src",
+    "eslint": "npx eslint ./src --quite --fix"
+  },
   "dependencies": {
     "discord.js": "^13.0.1",
     "node-fetch": "^2.6.1"
@@ -18,22 +24,15 @@
     "eslint-plugin-import": "2.24.0",
     "eslint-plugin-prettier": "^3.4.0"
   },
-  "prettier": {
-    "trailingComma": "es5",
-    "tabWidth": 2,
-    "semi": true,
-    "singleQuote": true
-  },
   "type": "module",
-  "scripts": {
-    "dev": "nodemon -r dotenv/config ./src/index.js",
-    "start": "pm2 restart ./src/index.js --node-args='-r dotenv/config'"
+  "engines": {
+    "node": ">=16.0.0"
   },
   "author": "Omar Aziz <omars@hey.com> (https://omars.io)",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Omar-Aziz/KryptoBOT"
+    "url": "https://github.com/Omar-Aziz/KryptoBOT"
   },
   "bugs": {
     "url": "https://github.com/Omar-Aziz/KryptoBOT"

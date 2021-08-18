@@ -3,4 +3,9 @@ node_modules
 .git
 .vscode
 t.js
+.t.*
 .assets
+archive
+scratch
+.archive
+.scratch
