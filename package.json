@@ -22,7 +22,7 @@
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "2.27.5",
-    "eslint-plugin-prettier": "^3.4.0"
+    "eslint-plugin-prettier": "^4.0.0"
   },
   "type": "module",
   "engines": {
