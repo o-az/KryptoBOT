@@ -18,7 +18,7 @@ jobs:
           ref: ${{ github.head_ref }}
 
       - name: Prettify code
-        uses: creyD/prettier_action@v3.3
+        uses: creyD/prettier_action@v4.3
         with:
           # only_changed: true
           # dry:
